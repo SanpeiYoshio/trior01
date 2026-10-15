@@ -1,0 +1,133 @@
+/* 送信前 宛先確認 タスクペイン */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Meiryo UI", "Yu Gothic UI", "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #201f1e;
+  background: #ffffff;
+  padding: 14px 14px 24px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.subject {
+  margin: 0 0 6px;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.lead {
+  margin: 0 0 10px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.list {
+  border: 1px solid #c8c6c4;
+  border-radius: 4px;
+  padding: 4px 8px;
+  max-height: 46vh;
+  overflow-y: auto;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 7px 2px;
+  border-bottom: 1px solid #edebe9;
+  cursor: pointer;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 3px 0 0;
+  flex: 0 0 auto;
+}
+
+.tag {
+  flex: 0 0 auto;
+  min-width: 34px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 3px;
+  margin-top: 2px;
+  color: #ffffff;
+  background: #0f6cbd;
+}
+
+.tag-cc { background: #5c7c2f; }
+.tag-bcc { background: #8a4b9e; }
+
+.txt {
+  word-break: break-all;
+}
+
+.note {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #605e5c;
+}
+
+.status {
+  min-height: 22px;
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.status.error { color: #a4262c; font-weight: 600; }
+.status.ok { color: #107c10; font-weight: 600; }
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+button {
+  font: inherit;
+  padding: 7px 14px;
+  border: 1px solid #8a8886;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #201f1e;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) { background: #f3f2f1; }
+button:disabled { opacity: 0.55; cursor: default; }
+
+button.primary {
+  background: #0f6cbd;
+  border-color: #0f6cbd;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+button.primary:hover:not(:disabled) { background: #115ea3; }
+
+button.sub {
+  font-size: 13px;
+  padding: 4px 10px;
+}

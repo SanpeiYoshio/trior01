@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>送信前 宛先確認</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <link rel="stylesheet" href="taskpane.css">
+</head>
+<body>
+  <h1>送信前の宛先確認</h1>
+  <p id="subject" class="subject"></p>
+  <p class="lead">送信する宛先にチェックを付けてください。<br>チェックなしの宛先は、メールから外れます。</p>
+
+  <div class="toolbar">
+    <button id="btn-all" class="sub" type="button">すべて選択</button>
+    <button id="btn-none" class="sub" type="button">すべて解除</button>
+  </div>
+
+  <div id="recipient-list" class="list" role="group" aria-label="宛先"></div>
+  <p id="internal-note" class="note"></p>
+
+  <div id="status" class="status" role="status" aria-live="polite"></div>
+
+  <div class="actions">
+    <button id="btn-confirm" class="primary" type="button">確定</button>
+    <button id="btn-cancel" type="button">キャンセル</button>
+  </div>
+  <p class="note">「確定」のあと、もう一度「送信」を押すと送信されます。</p>
+
+  <script src="addin.js"></script>
+</body>
+</html>
